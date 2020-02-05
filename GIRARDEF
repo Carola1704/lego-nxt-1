@@ -1,1 +1,39 @@
+void girar (char dirección, char sentido,int tiempo, int velocidad);
+void dirección(char dirección,int tiempo, int velocidad);
+void sentido(char sentido,int tiempo,int velocidad);
 
+//Salida C: Rueda izquierda
+//Salida B: Rueda derecha
+
+task main(){
+
+    void dirección(char dirección,int tiempo, int velocidad){
+
+   if(dirección == 'D'){
+      //dirección derecha
+    OnFwd(OUT_C, 75);
+    OnFwd(OUT_B, 50);
+    Wait(tiempo);
+   }
+
+   else(dirección=='I'){
+     //direción izquierda
+    OnFwd(OUT_C, 50);
+    OnFwd(OUT_B, 75);
+    Wait(tiempo);
+   }
+ }
+    void sentido(char sentido,int tiempo,int velocidad){
+
+    if(sentido=='D'){
+     //sentido delante
+    OnFwd(OUT_CB,75)
+    Wait(tiempo);
+   }
+
+   else(sentido=='A'){
+    //sentido atrás
+    OnRev(OUT_CB,75);
+    Wait(tiempo);
+   }
+  }
